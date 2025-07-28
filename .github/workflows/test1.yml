@@ -19,4 +19,4 @@ jobs:
       - name: Run aaa.m script # aaa.m スクリプトを実行 [3, 6, 9]
         uses: matlab-actions/run-command@v2
         with:
-          command: aaa # 実行するMATLABスクリプト名を指定 (拡張子.mは不要) [3, 9]
+          command: [y1,y2] = aaa(3,5) # 実行するMATLABスクリプト名を指定 (拡張子.mは不要) [3, 9]
