@@ -18,9 +18,8 @@ jobs:
           products: > # products入力で製品を指定
             Simulink
             Parallel_Computing_Toolbox
+            Deep_Learning_Toolbox
           
-        
-
       - name: Run aaa.m script # aaa.m スクリプトを実行 [3, 6, 9]
         uses: matlab-actions/run-command@v2
         with:
