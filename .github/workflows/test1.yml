@@ -1,0 +1,22 @@
+name: Run aaa.m script
+
+on: [push] # プッシュイベントが発生したときにワークフローを実行
+
+jobs:
+  run-matlab-script-job:
+    name: Run MATLAB Script on Linux
+    runs-on: ubuntu-latest # GitHubホストの最新のUbuntu (Linux) ランナーを使用 [4, 7-9]
+
+    steps:
+      - name: Check out repository # リポジトリのコードをランナーにチェックアウト [4, 7-9]
+        uses: actions/checkout@v4
+
+      - name: Set up MATLAB R2024b # MATLAB R2024b をランナーにセットアップ [1-3]
+        uses: matlab-actions/setup-matlab@v2
+        with:
+          release: R2024b # MATLABのバージョンをR2024bに指定 [2, 3]
+
+      - name: Run aaa.m script # aaa.m スクリプトを実行 [3, 6, 9]
+        uses: matlab-actions/run-command@v2
+        with:
+          command: [y1,y2] = aaa(3,5) # 実行するMATLABスクリプト名を指定 (拡張子.mは不要) [3, 9]
