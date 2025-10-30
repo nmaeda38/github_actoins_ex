@@ -2,4 +2,4 @@ disp('Run aaa')
 
 ver -support
 pwd
-ls 
+ls % フォルダ内確認
