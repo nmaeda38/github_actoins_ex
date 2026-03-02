@@ -1,6 +1,6 @@
 name: Run aaa.m script
 
-on: [push] # プッシュイベントが発生したときにワークフローを実行
+on: [push] # プッシュイベントが発生したときに ワークフローを実行
 
 jobs:
   run-matlab-script-job:
